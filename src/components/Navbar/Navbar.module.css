@@ -1,0 +1,20 @@
+/* Layout.module.css */
+.nav {
+  display: flex;
+  justify-content: left;
+  background-color: #333;
+  padding: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  margin-left: 20px;
+}
+.active {
+  color: #f37210;
+}
+.link:hover {
+  color: #f37210;
+}

@@ -1,0 +1,17 @@
+/* Your CSS module for the button */
+
+.button {
+  background-color: #333; /* Orange background */
+  color: #ffa500; /* Grey text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff8c00; /* Darker orange on hover */
+  color: #fff; /* White text color on hover */
+}

@@ -1,0 +1,51 @@
+/* Your updated CSS module for the component */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Change to align items to the left */
+  margin: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333; /* Grey text color */
+  margin-top: 20px;
+  text-align: left; /* Align the text to the left */
+}
+
+/* Style for the Loader component */
+.loader {
+  display: flex;
+  justify-content: flex-start; /* Align the loader to the left */
+  align-items: flex-start; /* Align the loader to the left */
+  margin-top: 20px;
+}
+
+/* Style for the SearchForm component */
+.search-form {
+  margin: 20px;
+  text-align: left; /* Align the form to the left */
+}
+
+/* Style for the MovieList component */
+.movie-list {
+  display: flex; /* Change to a flex layout */
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+/* Style for individual movies in MovieList */
+.movie-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left; /* Align the text to the left */
+  transition: transform 0.2s;
+  width: 250px; /* Set a fixed width for the cards */
+  margin-right: 20px; /* Add some margin for spacing */
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}

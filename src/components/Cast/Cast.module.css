@@ -1,0 +1,33 @@
+/* Cast.module.css */
+.castContainer {
+  text-align: center;
+  margin: 20px;
+}
+
+.castContainer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.castList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.castItem {
+  margin: 10px;
+  text-align: center;
+}
+
+.castItem img {
+  width: 200px;
+  height: 300px;
+}
+
+.noPoster {
+  width: 200px;
+  height: 300px;
+}

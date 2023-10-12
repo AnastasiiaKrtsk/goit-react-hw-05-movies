@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import MoviesList from '../components/Movies-list/Movies-list';
 import { getTrendingMovies } from '../services/api';
+import styles from './Home.module.css';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
 
-  const fetchData = async () => {
-    try {
-      const movies = await getTrendingMovies();
-      setTrendingMovies(movies);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const movies = await getTrendingMovies();
+        setTrendingMovies(movies);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-  // Call fetchData directly when the component is rendered
-  fetchData();
+    fetchData();
+  }, []);
 
   return (
-    <div>
-      <h2>Trending Movies</h2>
-      <MoviesList movies={trendingMovies} />{' '}
+    <div className={styles.container}>
+      <h2 className={styles.h2}>Trending Movies</h2>
+      <MoviesList movies={trendingMovies} className={styles.moviesList} />
     </div>
   );
 };

@@ -9,41 +9,29 @@ const params = {
     language: 'en-US',
   },
 };
-//trending movies request
+//*trending movies request
 export const getTrendingMovies = async () => {
   const response = await axios.get(`trending/movie/day`, params);
   return response.data.results;
 };
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// movie details request
-export const getMovieById = async movieId => {
-  const res = await axios
-    .get(`/movie/${movieId}?api_key=${KEY}`)
-    .catch(error => {
-      throw new Error('an error occured...');
-    });
-  return res.data;
+
+//*
+export const getMovieDetails = async movieId => {
+  const response = await axios.get(`/movie/${movieId}`, params);
+  return response.data;
 };
 
-//cast info request
-export const getCredits = async movieId => {
-  const { data } = await axios.get(
-    `/movie/${movieId}/credits?api_key=${KEY}&language=en-US`
-  );
-
-  return data.cast;
+export const handleSearch = async movieName => {
+  const response = await axios.get(`/search/movie?query=${movieName}`, params);
+  return response.data.results;
 };
 
-//reviews request
-export const getReviews = async movieId => {
-  const { data } = await axios.get(`/movie/${movieId}/reviews?api_key=${KEY}`);
-  return data.results;
+export const getMovieCast = async movieId => {
+  const response = await axios.get(`movie/${movieId}/credits?`, params);
+  return response.data.cast;
 };
 
-// search movies request
-export const getMoviesByName = async query => {
-  const { data } = await axios.get(
-    `/search/movie?api_key=${KEY}&query=${query}&language=en-US&page=1&include_adult=false`
-  );
-  return data;
+export const getMovieReviews = async movieId => {
+  const response = await axios.get(`movie/${movieId}/reviews?`, params);
+  return response.data.results;
 };

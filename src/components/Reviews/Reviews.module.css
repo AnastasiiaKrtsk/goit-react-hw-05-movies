@@ -1,0 +1,30 @@
+/* Reviews.module.css */
+.reviewsContainer {
+  text-align: left; /* Align text to the left */
+  margin: 20px;
+}
+
+.reviewsContainer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.reviewsList {
+  list-style: none;
+  padding: 0;
+}
+
+.reviewItem {
+  margin: 10px;
+  text-align: left; /* Align text to the left */
+}
+.texty {
+  font-weight: bold;
+}
+.comment {
+  margin-top: 10px;
+  background-color: #bababa;
+  border-radius: 10px; /* Add a border for the comment container */
+  padding: 10px;
+  margin-bottom: 10px;
+}
